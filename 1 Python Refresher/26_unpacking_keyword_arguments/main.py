@@ -81,7 +81,4 @@ def myfunctions(**kwargs):
   print(kwargs)
 
 # myfunctions(**"Bob") # ERROR, must be a mapping. Karena yang dipassing haruslah dictionary, ini string
-# myfunctions(**None) # ERROR Karena yang dipassing haruslah dictionary
-
-a = {"number": 1}
-myfunctions(a)
+myfunctions(**None) # ERROR Karena yang dipassing haruslah dictionary

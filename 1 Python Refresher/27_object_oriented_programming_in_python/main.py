@@ -39,7 +39,7 @@
 class Student:
   # Ini disebut constructor
   def __init__(self, name, grades):
-    self.name = name
+    self.name = name # ini properties
     self.grades = grades
 
   # Ini disebut method
