@@ -11,7 +11,7 @@
 #################################################################################################################
 
 # # kita dapat menulis ulang function diatas dengan lamda function
-# # terdiri dari: lambda keword -- parameter: --- return value
+# # terdiri dari: lambda keword -- parameter: --- expression/return
 # # kita bahkan tidak memerlukan return keyword
 # # lambda x, y: x + y 
 
