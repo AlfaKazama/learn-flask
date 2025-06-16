@@ -56,7 +56,7 @@ class Printer(Device):
       return
     print(f"Printing {pages} pages")
     self.remaining_pages -= pages
-    super().disconnect()
+    # super().disconnect
 
 
 hp = Printer("HP Printer", "USB", 100)
@@ -64,5 +64,7 @@ print(hp)
 
 hp.print(10)
 print(hp.remaining_pages)
-# hp.disconnect()
-# hp.print(20)
+
+# Ketika kita memanggil disconnect(), akan terjadi 3 tingkatan panggilan: Pertama python akan mengecek adakah method disconnect() pada class Printer, jika tidak ada dia akan mengecek lagi pada parentnya class Device, jika masih tidak ada python akan mengecek pada object. Jika di object tidak ada maka akan error
+hp.disconnect()
+hp.print(20)
