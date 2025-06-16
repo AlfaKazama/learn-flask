@@ -1,0 +1,1 @@
+# diptyhon versi lama diperlukan file dunder ini, jika tidak error.

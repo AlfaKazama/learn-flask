@@ -50,16 +50,12 @@ class Book:
 
 # Sekarang kita diatas memilki dua class yang simple, lalu bagaimana cara menggunakannya?
 # Kita cukup membuat object/instance dari Book, kemudian kita membuat instance dari BookShelf dan memberinya buku(instance/obejct)
+# Ketika kita memilki class yang berisi sekelompok class yang lain, disini kita memilki "BookShelf" yang berisi banyak "Book" . Dan ketika kita menggunakannya, kita dapat passing sekumpulan instance/object. 
 
 book = Book("Haryy Potter")
 book2 = Book("Python 101")
 shelf = BookShelf(book, book2)
-print(shelf.books)
 
+# print(shelf.books)
 print(shelf)
 
-
-def add(a, *b):
-  print(a, b)
-
-add(20, 2, 3, 5)
