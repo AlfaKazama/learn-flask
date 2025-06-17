@@ -29,4 +29,5 @@
 import mymodule
 import sys
 
+print(mymodule.divide(10, 10))
 print(sys.modules)
