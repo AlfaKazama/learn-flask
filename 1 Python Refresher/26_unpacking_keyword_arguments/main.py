@@ -5,7 +5,7 @@
 
 # # Ini akan menghasilkan sebuah dictionary 
 # # Apa yang terjadi di python ? kedua key argument ini akan dikumpulkan ke dalam variabel kwargs dan akan ditempatkan dalam sebuah dictionary
-# # Dimana dictionary keynya sama dengan name dari key argument
+# # Dimana dictionary keynya sama dengan name dari argument
 # named(name="Bob", age=25)
 
 #################################################################################################################
