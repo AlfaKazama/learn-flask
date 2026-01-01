@@ -1,10 +1,10 @@
-# # Membuat function sederhana
+# Membuat function sederhana
 
-# def hello():
-#   print("Hello World!")
+def hello():
+  print("Hello World!")
 
 
-# hello()
+hello()
 
 ###################################################################################################
 
@@ -61,15 +61,15 @@
 #   print("Hello!")
 
 ###################################################################################################
-# kita dapat mengakses variabel global didalam scope function terlebih dahulu sebelum didefinisikan, tapi kita harus membuat variabel tersebut sebelum function dipanggil
+# # kita dapat mengakses variabel global didalam scope function terlebih dahulu sebelum didefinisikan, tapi kita harus membuat variabel tersebut sebelum function dipanggil
 
-def add_friends():
-  friends.append("Rolf")
+# def add_friends():
+#   friends.append("Rolf")
 
-friends = []
+# friends = []
 
-add_friends()
-add_friends()
-add_friends()
+# add_friends()
+# add_friends()
+# add_friends()
 
-print(friends)
+# print(friends)
