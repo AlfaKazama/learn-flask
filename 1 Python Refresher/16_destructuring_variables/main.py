@@ -1,21 +1,21 @@
-# # Penggunaan kurung pada tuple kadang tidak diperlukan, penggunaan tanda kurung digunakan ketika python akan sulit saat membuat tuple dan kondisi lain bersamaan
+# Penggunaan kurung pada tuple kadang tidak diperlukan, penggunaan tanda kurung digunakan ketika python akan sulit saat membuat tuple dan kondisi lain bersamaan
 
-# # contoh penggunaan tanda kurung saat membuat tuple didalam list
-# x = [(5, 11)]
+# contoh penggunaan tanda kurung saat membuat tuple didalam list
+x = [(5, 11)]
 
-# # jadi kita bisa membuat tuple seperti ini (tanpa tanda kurung)
-# x = 5, 11
+# jadi kita bisa membuat tuple seperti ini (tanpa tanda kurung)
+x = 5, 11
 
 
-# # Destructuring variabel
-# # kita bisa memisah nilai seperti berikut
-# x, y = 5, 11
+# Destructuring variabel
+# kita bisa memisah nilai seperti berikut
+x, y = 5, 11
 
-# # dengan destructuring kita bisa melakukan ini
-# t = 5, 11
-# x, y = t
+# dengan destructuring kita bisa melakukan ini
+t = 5, 11
+x, y = t
 
-# print(x, y)
+print(x, y)
 
 ########################################################################################################################
 
@@ -55,7 +55,7 @@
 
 ########################################################################################################################
 
-# Memisahkan menjadi 2 list
-head, *tail = [1, 2, 3, 4, 5] # mengambil 1 nilai dan (*) mengambil sisa nilainya
-print(head)
-print(tail)
+# # Memisahkan menjadi 2 list
+# head, *tail = [1, 2, 3, 4, 5] # mengambil 1 nilai dan (*) mengambil sisa nilainya
+# print(head)
+# print(tail)
