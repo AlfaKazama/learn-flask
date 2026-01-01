@@ -10,21 +10,21 @@
 
 ################################################################
     
-# name = "Alfa"
+name = "Alfa"
 
-# print(name)
-# print(name * 2)
-# print(name + name)
+print(name)
+print(name * 2)
+print(name + name)
 
 ################################################################
 
-a = 25
-b = a
+# a = 25
+# b = a
 
-print(a)
-print(b)
+# print(a)
+# print(b)
 
-b = 17
+# b = 17
 
-print(a)
-print(b)
+# print(a)
+# print(b)
