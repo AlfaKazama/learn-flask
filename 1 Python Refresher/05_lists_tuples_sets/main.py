@@ -10,8 +10,8 @@ print(list)
 print(tuple)
 print(set)
 
-print(list[0])
-print(tuple[0])
+# print(list[0])
+# print(tuple[0])
 
 
 ## Replace value in list, in tuple you cannot be modified after they're created 
