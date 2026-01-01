@@ -10,20 +10,20 @@
 
 #####################################################
 
-# name = "Alfa"
-# greeting = "Hello, {}"
-# with_name = greeting.format(name)
-# with_name_two = greeting.format("Gani")
+name = "Alfa"
+greeting = "Hello, {}"
+with_name = greeting.format(name)
+with_name_two = greeting.format("Gani")
 
-# print(with_name)
-# print(with_name_two)
+print(with_name)
+print(with_name_two)
 
 #####################################################
 
-longer_phrase = "Hello, {}. Today is {}"
+# longer_phrase = "Hello, {}. Today is {}"
 
-formatted = longer_phrase.format("Alfa", "Monday")
-print(formatted)
+# formatted = longer_phrase.format("Alfa", "Monday")
+# print(formatted)
 
 
 
