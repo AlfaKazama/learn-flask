@@ -1,14 +1,14 @@
-# ## Penggunaaan parameter dan arguments pada functions
+## Penggunaaan parameter dan arguments pada functions
 
-# # def add(x, y):
-# #   pass # pass berati didalam function tidak terjadi apa apa, atau kosong
-
-# # (x, y) adalah parameter, and (5, 3) adalah argument
 # def add(x, y):
-#   result = x + y
-#   print(result)
+#   pass # pass berati didalam function tidak terjadi apa apa, atau kosong
 
-# add(5, 3)
+# (x, y) adalah parameter, and (5, 3) adalah argument
+def add(x, y):
+  result = x + y
+  print(result)
+
+add(5, 3)
 
 #############################################################################################################
 
@@ -41,13 +41,13 @@
 
 
 #############################################################################################################
-# position argument harus ditempatkan terlebih dahulu dibanding keyword argument
+# # position argument harus ditempatkan terlebih dahulu dibanding keyword argument
 
-def divide(dividend, divisor):
-  if divisor != 0:
-    print(dividend / divisor)
-  else:
-    print("You fool!")
+# def divide(dividend, divisor):
+#   if divisor != 0:
+#     print(dividend / divisor)
+#   else:
+#     print("You fool!")
 
-# divide(dividend=15, 0) # akan error, karnea position argument harus ditempatkan terlebih dahulu 
-divide(15, divisor=5)
+# # divide(dividend=15, 0) # akan error, karnea position argument harus ditempatkan terlebih dahulu 
+# divide(15, divisor=5)
