@@ -9,20 +9,20 @@
 # print(local_friends)
 
 ######################################################################
-# # Function "union()"
+# Function "union()"
 
-# local = {"Bob", "Rolf", "Anne"}
-# abroad = {"Bob", "Anne"}
+local = {"Bob", "Rolf", "Anne"}
+abroad = {"Bob", "Anne"}
 
-# friends = local.union(local, abroad) # menggabungkan set local dan abroad
-# print(friends)
+friends = local.union(local, abroad) # menggabungkan set local dan abroad
+print(friends)
 
 ######################################################################
-# Function "intersection()"
+# # Function "intersection()"
 
-art = {"Bob", "Jen", "Rolf", "Charlie"}
-science = {"Bob", "Jen", "Adam", "Anne"}
+# art = {"Bob", "Jen", "Rolf", "Charlie"}
+# science = {"Bob", "Jen", "Adam", "Anne"}
 
-# Membuat set yang menampung orang yang belajar art dan science (belajar keduanya)
-both = art.intersection(science) # irisan dari kedua set
-print(both)
+# # Membuat set yang menampung orang yang belajar art dan science (belajar keduanya)
+# both = art.intersection(science) # irisan dari kedua set
+# print(both)
