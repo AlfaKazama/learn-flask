@@ -58,3 +58,8 @@ def apply(*args, operator):
   
 # Kita harus memasukkan named argument (operator=), jika tidak maka python akan mencoba mengumpulkannya dengan args. jadi kita akan kehilangan parameter operator
 print(apply(1, 3, 6, 7, operator="*"))
+
+#################################################################################################################
+
+# a, *b = (1, 2, 3)
+# print(a, b)

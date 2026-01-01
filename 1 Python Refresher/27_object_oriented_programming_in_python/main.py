@@ -51,9 +51,9 @@ class Student:
 student1 = Student(name="Bob", grades=(100, 100, 93, 78, 90))
 student2 = Student("Rolf", (90, 90, 93, 78, 90))
 
-# print(student1, student2) # object disimpan pada alamat memori yang berbeda
-# print(student1.name)
-# print(student2.name)
+print(student1, student2) # object disimpan pada alamat memori yang berbeda
+print(student1.name)
+print(student2.name)
 
 print(student1.average_grade())
 print(student2.average_grade())

@@ -1,0 +1,6 @@
+flask
+flask-smorest
+python-dotenv
+
+
+# install requirement dengan command: "pip install -r requirements.txt"

@@ -31,13 +31,13 @@
 
 #############################################################################################################
 
-## Posisi argument mempengaruhi nilai
-def say_hello(name, surname):
-  print(f"Hello, {name} {surname}")
+# ## Posisi argument mempengaruhi nilai
+# def say_hello(name, surname):
+#   print(f"Hello, {name} {surname}")
 
-say_hello("Bob", "Smith")
-## kita bisa menggunakan keywor/name argument agar kita tidak peduli dengan posisi argument
-say_hello(surname="Bob", name="Smith")
+# say_hello("Bob", "Smith")
+# ## kita bisa menggunakan keywor/name argument agar kita tidak peduli dengan posisi argument
+# say_hello(surname="Bob", name="Smith")
 
 
 #############################################################################################################

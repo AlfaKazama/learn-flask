@@ -1,0 +1,2 @@
+import flask_smorest
+print(flask_smorest.__version__)

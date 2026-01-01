@@ -21,8 +21,8 @@
 # print(b)
 
 #############################################################################################################
-# Jika kita mengubah b menjadi empty list, maka kita akan lihat perbedaaanya
-# karena keduanya dibaut secara terpisah, dan disimpan secara terpisah
+# # Jika kita mengubah b menjadi empty list, maka kita akan lihat perbedaaanya
+# # karena keduanya dibaut secara terpisah, dan disimpan secara terpisah
 
 # a = []
 # b = []
@@ -70,18 +70,38 @@
 
 #############################################################################################################
 
-# integer juga merupakan immutable, kita tidak dapat mengubahnya 
+# # integer juga merupakan immutable, kita tidak dapat mengubahnya 
 
-a = 8597
-b = 8597
+# a = 8597
+# b = 8597
 
+# print(id(a))
+# print(id(b))
+
+# # jika kita melakukan ini, b tidak akan berubah karena nilai "8597" diciptakan pertama kali dan "a" adalah name dari nilai tersebut. assgiment name (pemberian) nama terjadi dengan tanda sama dengan (=)
+# # dan disini kita membuat "8598" dan kita memberi namenya "a"
+# # namun "b" masih merupakan name untuk "8997", itu tidak berubah sama sekali
+# a = 8598
+
+# print(id(a))
+# print(id(b))
+
+# # jadi sebagian besar di ptyhon adalah mutable, kecuali tuple, string, integer, float, dan booleans mereka adalah immutable dan sisanya adalah mutable
+
+
+# # Jika kita ingin membuat class yang immutable dan object yang immutable, jangan menambahkan metode apapun didalamnya yang dapat mengubah properties object. contohnya ketika kita memilki object "book" dan kita menginginkannya immutable, jangan biarkan siapapun mengubah name propreties dari book itu
+
+
+#############################################################################################################
+
+# jika kita mmebuat string "hello" dan diberi name "a", lalu membuat b dan memberikan nilai yang sama dengan nilai a
+
+a = "hello"
+b = a
+
+# menghasilkan id yang sama
 print(id(a))
 print(id(b))
 
-# jika kita melakukan ini, b tidak akan berubah karena nilai "8597" diciptakan pertama kali dan "a" adalah name dari nilai tersebut. assgiment name (pemberian) nama terjadi dengan tanda sama dengan (=)
-# dan disini kita membuat "8598" dan kita memberi namenya "a"
-# namun "b" masih merupakan name untuk "8997", itu tidak berubah sama sekali
-a = 8598
-
-print(id(a))
-print(id(b))
+# jika kita malkukna ini kita seperti menugaskan kembali name a kedalam string baru, dan b akan tetap "helo"
+a += "world"

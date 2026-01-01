@@ -47,8 +47,8 @@
 # def named(**kwargs):
 #   print(kwargs)
 
-# def print_nicely(**kwargs): ## **kwargs-> membongkar
-#   named(**kwargs) ## **kwargs -> mengemas ulang
+# def print_nicely(**kwargs): ## **kwargs-> mengemas
+#   named(**kwargs) ## **kwargs -> membongkar ulang
 #   for arg, value in kwargs.items():
 #     print(f"{arg}: {value}")
 

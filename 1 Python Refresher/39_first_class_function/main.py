@@ -79,3 +79,5 @@ print(search(friends, "Rolf Smith", lambda friend: friend["name"]))
 # Menggunkana imgetter fungsinya sama seperti lambda function
 print(search(friends, "Rolf Smith", itemgetter("name")))
 
+
+# (lambda x, y: print(x + y))(20, 10)

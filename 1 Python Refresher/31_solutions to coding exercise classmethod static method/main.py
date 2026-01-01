@@ -33,6 +33,9 @@ store2 = Store("Amazon")
 store2.add_item("Keyboard", 160)
 store2.add_item("Mouse", 100)
 
+# storeduplicat = Store.franchise(store)
+# print(store.name, storeduplicat.name)
+
 # print(Store.franchise(store).name)
 # print(Store.franchise(store2).name)
 

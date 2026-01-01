@@ -37,7 +37,7 @@
 
 ################################################################################################################
 
-## Menggunakan FOR loop untuk menghitung rata rata
+# Menggunakan FOR loop untuk menghitung rata rata
 grades = [35, 67, 98, 100, 100]
 total = 0
 amount = len(grades)

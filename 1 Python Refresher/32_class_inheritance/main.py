@@ -56,7 +56,7 @@ class Printer(Device):
       return
     print(f"Printing {pages} pages")
     self.remaining_pages -= pages
-    # super().disconnect
+    # super().disconnect()
 
 
 hp = Printer("HP Printer", "USB", 100)

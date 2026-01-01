@@ -4,9 +4,9 @@
 #     self.page_count = page_count
 #     self.pages_read = 0
 
-#   def __reps__(self):
+#   def __repr__(self):
 #     return (
-#       f"<Book {self.name}, read {self.paage_read} pages out of {self.page_count}>"
+#       f"<Book {self.name}, read {self.pages_read} pages out of {self.page_count}>"
 #     )
   
 #   def read(self, pages:int):
