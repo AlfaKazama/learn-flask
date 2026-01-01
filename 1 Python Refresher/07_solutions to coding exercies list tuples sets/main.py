@@ -5,9 +5,9 @@ print(my_list)
 my_tuple = (100, ) # using comma, agar python dapat mengenalinya sebagai tuple bukan sebagai operasi matematika
 print(my_tuple)
 
-# Modify set2 to that set1.intersection(set2) returns {5, 77, 9, 12}
+## Modify set2 to that set1.intersection(set2) returns {5, 77, 9, 12}
 set1 = {14, 5, 9, 31, 12, 77, 67, 8}
 set3 = {5, 77, 9, 12}
 set2 = set1.intersection({5, 77, 9, 12})
-
+# set2 = set1.intersection(set3)
 print(set2)
