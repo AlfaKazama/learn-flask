@@ -1,12 +1,12 @@
-# ## Lambda Functions adalah jenis funcion yang berbeda yang tidak memiliki nama, dan hanya digunakan untuk mengembalikan (return) nilai
-# # Ingat sebelumya kita tahu bahwa function dapat digunakan untuk melakukan tindakan seperti mencetak sesuatu, atau mengoperasikan value lalu mereturnnya, seperfi sum function dll.
-# # Tapi lambda functions secara ekslusif digunakan untuk mengeoperasikan input dan mereturn output. Mereka hampir tidak pernah digunakan untuk melakukan tindakan
+## Lambda Functions adalah jenis funcion yang berbeda yang tidak memiliki nama, dan hanya digunakan untuk mengembalikan (return) nilai
+# Ingat sebelumya kita tahu bahwa function dapat digunakan untuk melakukan tindakan seperti mencetak sesuatu, atau mengoperasikan value lalu mereturnnya, seperfi sum function dll.
+# Tapi lambda functions secara ekslusif digunakan untuk mengeoperasikan input dan mereturn output. Mereka hampir tidak pernah digunakan untuk melakukan tindakan
 
-# # simple function yang mendapatkan input dan mengembalikan output
-# def add(x, y):
-#   return x + y
+# simple function yang mendapatkan input dan mengembalikan output
+def add(x, y):
+  return x + y
 
-# print(add(5, 7))
+print(add(5, 7))
 
 #################################################################################################################
 
@@ -54,11 +54,11 @@
 
 #################################################################################################################
 
-# Kita bisa menggunakan lambda function pada list comprehension meskipun code akan terlihat membingungkan
-sequence = [1, 3, 5, 9]
-doubled = [(lambda x: x * 2)(x) for x in sequence]
-print(doubled)
+# # Kita bisa menggunakan lambda function pada list comprehension meskipun code akan terlihat membingungkan
+# sequence = [1, 3, 5, 9]
+# doubled = [(lambda x: x * 2)(x) for x in sequence]
+# print(doubled)
 
-# Jika ingin menggunakan lambda lebih baik lakukan pada map function
-doubled = map(lambda x: x * 2, sequence)
-print(doubled)
+# # Jika ingin menggunakan lambda lebih baik lakukan pada map function
+# doubled = map(lambda x: x * 2, sequence)
+# print(doubled)
