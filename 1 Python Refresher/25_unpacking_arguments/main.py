@@ -1,9 +1,9 @@
-# (*) asterik pada parameter berarti mengumpulkan argument, jadi function akan memilki separangkat argument yang dikumpulkan menjadi sebuah tuple argument, ketika function dipanggil
+# # (*) asterik pada parameter berarti mengumpulkan argument, jadi function akan memilki separangkat argument yang dikumpulkan menjadi sebuah tuple argument, ketika function dipanggil
 
-def multiply(*args):
-  print(args)
+# def multiply(*args):
+#   print(args)
 
-multiply(1, 3, 5) # kita akan memilki tuple dengan isi 1,3,5
+# multiply(1, 3, 5) # kita akan memilki tuple dengan isi 1,3,5
 
 #################################################################################################################
 
