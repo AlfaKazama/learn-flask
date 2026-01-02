@@ -1,9 +1,9 @@
-# # (*) asterik pada parameter berarti mengumpulkan argument, jadi function akan memilki separangkat argument yang dikumpulkan menjadi sebuah tuple argument, ketika function dipanggil
+# (*) asterik pada parameter berarti mengumpulkan argument, jadi function akan memilki separangkat argument yang dikumpulkan menjadi sebuah tuple argument, ketika function dipanggil
 
-# def multiply(*args):
-#   print(args)
+def multiply(*args):
+  print(args)
 
-# multiply(1, 3, 5) # kita akan memilki tuple dengan isi 1,3,5
+multiply(1, 3, 5) # kita akan memilki tuple dengan isi 1,3,5
 
 #################################################################################################################
 
@@ -40,24 +40,24 @@
 
 #################################################################################################################
 
-def multiply(*args):
-  # print(args)
-  total = 1
-  for arg in args:
-    total = total * arg
-  return total
+# def multiply(*args):
+#   # print(args)
+#   total = 1
+#   for arg in args:
+#     total = total * arg
+#   return total
 
-def apply(*args, operator):
-  print(args)
-  if operator == "*":
-    return multiply(*args) # pengunaan asterik* disini untuk membongkar tuple, karna args disini adalah tuple, jadi kita bongkar
-  elif operator == "+":
-    return sum(args)
-  else:
-    return "No valid operator provided to apply()."
+# def apply(*args, operator):
+#   print(args)
+#   if operator == "*":
+#     return multiply(*args) # pengunaan asterik* disini untuk membongkar tuple, karna args disini adalah tuple, jadi kita bongkar
+#   elif operator == "+":
+#     return sum(args)
+#   else:
+#     return "No valid operator provided to apply()."
   
-# Kita harus memasukkan named argument (operator=), jika tidak maka python akan mencoba mengumpulkannya dengan args. jadi kita akan kehilangan parameter operator
-print(apply(1, 3, 6, 7, operator="*"))
+# # Kita harus memasukkan named argument (operator=), jika tidak maka python akan mencoba mengumpulkannya dengan args. jadi kita akan kehilangan parameter operator
+# print(apply(1, 3, 6, 7, operator="*"))
 
 #################################################################################################################
 
