@@ -23,17 +23,17 @@ print(username_mapping)
 
 #################################################################################################################
 
-# Misal kita melakukan simulasi login
+# # Misal kita melakukan simulasi login
 
-username_mapping = {user[1]: user for user in users}
+# username_mapping = {user[1]: user for user in users}
 
-username_input = input("Enter your username: ")
-password_input = input("Enter your password: ")
+# username_input = input("Enter your username: ")
+# password_input = input("Enter your password: ")
 
-# kita bisa melakukan ini, untuk mendapatkan tupple informasi user
-_, username, password = username_mapping[username_input]
+# # kita bisa melakukan ini, untuk mendapatkan tupple informasi user
+# _, username, password = username_mapping[username_input]
 
-if password_input == password:
-  print("Your details are correct!")
-else:
-  print("Your details are incorrect.")
+# if password_input == password:
+#   print("Your details are correct!")
+# else:
+#   print("Your details are incorrect.")
