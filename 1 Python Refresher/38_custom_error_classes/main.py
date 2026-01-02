@@ -21,7 +21,7 @@ python101.read(50)
 
 
 
-#################################################################################################################
+##################################################################################################################
 # # Kita akan membuat jenis error baru dengan anama "TooManyPagesReadError" 
 # # Kita akan membuat class "TooManyPagesReadError" (letaknya tidak masalah ada sebelum atau sesudah class Book)
 # # class ini inherit dari class VallueError. kita perlu menggunakan inherit agar mempermudah dalam pembuatannya
