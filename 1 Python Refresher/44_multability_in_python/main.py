@@ -1,12 +1,12 @@
-# # Multability pada python, dan bagaimana hal itu dapat mempengaruhi program kita
+# Multability pada python, dan bagaimana hal itu dapat mempengaruhi program kita
 
-# a = []
-# b = a
+a = []
+b = a
 
 
-# # outputnya sama persis, a dan b adalah name untuk object yang sama
-# print(id(a))
-# print(id(b))
+# outputnya sama persis, a dan b adalah name untuk object yang sama
+print(id(a))
+print(id(b))
 
 #############################################################################################################
 
@@ -94,14 +94,14 @@
 
 #############################################################################################################
 
-# jika kita mmebuat string "hello" dan diberi name "a", lalu membuat b dan memberikan nilai yang sama dengan nilai a
+# # jika kita mmebuat string "hello" dan diberi name "a", lalu membuat b dan memberikan nilai yang sama dengan nilai a
 
-a = "hello"
-b = a
+# a = "hello"
+# b = a
 
-# menghasilkan id yang sama
-print(id(a))
-print(id(b))
+# # menghasilkan id yang sama
+# print(id(a))
+# print(id(b))
 
-# jika kita malkukna ini kita seperti menugaskan kembali name a kedalam string baru, dan b akan tetap "helo"
-a += "world"
+# # jika kita malkukna ini kita seperti menugaskan kembali name a kedalam string baru, dan b akan tetap "helo"
+# a += "world"
