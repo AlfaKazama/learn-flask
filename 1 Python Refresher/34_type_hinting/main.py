@@ -1,7 +1,7 @@
-# def list_avg(sequence):
-#   return sum(sequence) / len(sequence)
+def list_avg(sequence):
+  return sum(sequence) / len(sequence)
 
-# list_avg(123) # ini akan error, karena sum() dan len() meneria masukan iterable, tapi tidak ada yang meberi tahu kita kalo masukannya iterable. jadi untuk mencegah kesalahan, itu salah satu kegunaan type hinting
+list_avg(123) # ini akan error, karena sum() dan len() meneria masukan iterable, tapi tidak ada yang meberi tahu kita kalo masukannya iterable. jadi untuk mencegah kesalahan, itu salah satu kegunaan type hinting
 
 #################################################################################################################
 
@@ -54,23 +54,25 @@
 
 #################################################################################################################
 
-class Book:
-  TYPES = ("hardcover", "paperback")
+# class Book:
+#   TYPES = ("hardcover", "paperback")
 
-  def __init__(self, name: str, book_type: str, weight: int):
-    self.name = name
-    self.book_type = book_type
-    self.weight = weight
+#   def __init__(self, name: str, book_type: str, weight: int):
+#     self.name = name
+#     self.book_type = book_type
+#     self.weight = weight
 
-  def __repr__(self) -> str:
-    return f"<Book {self.name}, {self.book_type}, weighing {self.weight}g>"
+#   def __repr__(self) -> str:
+#     return f"<Book {self.name}, {self.book_type}, weighing {self.weight}g>"
   
 
-  # kita menggunakan type hint "Book" disini menggunakan string untuk penanda. karena kita tidak bisa menuliskannya tanpa string. Karena method ini dijalankan sebelum class Book selesai diseksekusi (Jenisnya sama dengan yang kita jalankan). Jika misal kita memaksudkannya untuk class lain kita tidak perlu tanda kutip. misal class BookShelf, jadi kita bisa menuliskannya ....)-> BookShelf:
-  @classmethod
-  def hardcover(cls, name: str, page_weight: int) -> "Book":
-    return cls(name, cls.TYPES[0], page_weight + 100)
+#   # kita menggunakan type hint "Book" disini menggunakan string untuk penanda. karena kita tidak bisa menuliskannya tanpa string. Karena method ini dijalankan sebelum class Book selesai diseksekusi (Jenisnya sama dengan yang kita jalankan). Jika misal kita memaksudkannya untuk class lain kita tidak perlu tanda kutip. misal class BookShelf, jadi kita bisa menuliskannya ....)-> BookShelf:
+#   @classmethod
+#   def hardcover(cls, name: str, page_weight: int) -> "Book":
+#     return cls(name, cls.TYPES[0], page_weight + 100)
   
-  @classmethod
-  def paperback(cls, name: str, page_weight: int) -> "Book":
-    return cls(name, cls.TYPES[1], page_weight)
+#   @classmethod
+#   def paperback(cls, name: str, page_weight: int) -> "Book":
+#     return cls(name, cls.TYPES[1], page_weight)
+
+
