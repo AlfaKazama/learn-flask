@@ -1,19 +1,19 @@
-# # first-class function berarti functions hanyalah sebuah variable. kita dapat mempassingnya sebagai function dan menggunakannya dengan cara sama seprti kita menggunakan variabel
+# first-class function berarti functions hanyalah sebuah variable. kita dapat mempassingnya sebagai function dan menggunakannya dengan cara sama seprti kita menggunakan variabel
 
-# def divide(dividend, divisor):
-#   if divisor == 0:
-#     raise ZeroDivisionError("Divisor cannot be 0.")
+def divide(dividend, divisor):
+  if divisor == 0:
+    raise ZeroDivisionError("Divisor cannot be 0.")
   
-#   return dividend / divisor
+  return dividend / divisor
 
 
-# def calculate(*values, operator):
-#   return operator(*values)
+def calculate(*values, operator):
+  return operator(*values)
 
 
-# # ini akan passing divide function sebagai operator. jadi operator memilki value yang sama dengan function divide
-# result = calculate(20, 4, operator=divide)
-# print(result)
+# ini akan passing divide function sebagai operator. jadi operator memilki value yang sama dengan function divide
+result = calculate(20, 4, operator=divide)
+print(result)
 
 #################################################################################################################
 
@@ -57,27 +57,27 @@
 # print(search(friends, "Rolf Smith", get_friend_name))
 
 #################################################################################################################
-# Kita bisa menggunakan lambda function
+# # Kita bisa menggunakan lambda function
 
-from operator import itemgetter
+# from operator import itemgetter
 
-def search(sequence, expected, finder):
-  for elem in sequence:
-    if finder(elem) == expected:
-      return elem
+# def search(sequence, expected, finder):
+#   for elem in sequence:
+#     if finder(elem) == expected:
+#       return elem
     
-  raise RuntimeError(f"Could not find an element with {expected}")
+#   raise RuntimeError(f"Could not find an element with {expected}")
 
-friends = [
-  {"name": "Rolf Smith", "age": 24},
-  {"name": "Adam Wool", "age": 30},
-  {"name": "Anne Pun", "age": 27}
-]
+# friends = [
+#   {"name": "Rolf Smith", "age": 24},
+#   {"name": "Adam Wool", "age": 30},
+#   {"name": "Anne Pun", "age": 27}
+# ]
   
-# menggunakan lambda function
-print(search(friends, "Rolf Smith", lambda friend: friend["name"]))
-# Menggunkana imgetter fungsinya sama seperti lambda function
-print(search(friends, "Rolf Smith", itemgetter("name")))
+# # menggunakan lambda function
+# print(search(friends, "Rolf Smith", lambda friend: friend["name"]))
+# # Menggunkana imgetter fungsinya sama seperti lambda function
+# print(search(friends, "Rolf Smith", itemgetter("name")))
 
 
-# (lambda x, y: print(x + y))(20, 10)
+# # (lambda x, y: print(x + y))(20, 10)
