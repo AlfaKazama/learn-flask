@@ -35,4 +35,4 @@ user = {"username": "anna", "access_level": "admin"}
 print(get_admin_password())
 print(get_dashboard_password())
 
-print(len("Halo Dunia"))
+# print(len("Halo Dunia"))
