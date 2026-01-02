@@ -1,12 +1,12 @@
-# # Kita akan membaut function sederhana yang akan menggunakan unpacking key arguments
-# def named(**kwargs):
-#   print(kwargs)
+# Kita akan membaut function sederhana yang akan menggunakan unpacking key arguments
+def named(**kwargs):
+  print(kwargs)
 
 
-# # Ini akan menghasilkan sebuah dictionary 
-# # Apa yang terjadi di python ? kedua key argument ini akan dikumpulkan ke dalam variabel kwargs dan akan ditempatkan dalam sebuah dictionary
-# # Dimana dictionary keynya sama dengan name dari argument
-# named(name="Bob", age=25)
+# Ini akan menghasilkan sebuah dictionary 
+# Apa yang terjadi di python ? kedua key argument ini akan dikumpulkan ke dalam variabel kwargs dan akan ditempatkan dalam sebuah dictionary
+# Dimana dictionary keynya sama dengan name dari argument
+named(name="Bob", age=25)
 
 #################################################################################################################
 
@@ -77,8 +77,9 @@
 
 #################################################################################################################
 
-def myfunctions(**kwargs):
-  print(kwargs)
+# def myfunctions(**kwargs):
+#   print(kwargs)
 
-# myfunctions(**"Bob") # ERROR, must be a mapping. Karena yang dipassing haruslah dictionary, ini string
-myfunctions(**None) # ERROR Karena yang dipassing haruslah dictionary
+# # myfunctions(**"Bob") # ERROR, must be a mapping. Karena yang dipassing haruslah dictionary, ini string
+# # myfunctions(**None) # ERROR Karena yang dipassing haruslah dictionary
+# myfunctions(**{"test": "Testing"})
