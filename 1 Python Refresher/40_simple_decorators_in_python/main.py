@@ -1,17 +1,17 @@
-# # Decorator memungkinkan kita memodifikasi function dengan sangat mudah
-# # Mengamnakan function get_admin_password() dari user guest
+# Decorator memungkinkan kita memodifikasi function dengan sangat mudah
+# Mengamnakan function get_admin_password() dari user guest
 
-# user = {"username": "jose", "access_levels": "guest"}
+user = {"username": "jose", "access_levels": "guest"}
 
-# def get_admin_password():
-#   return "1234"
+def get_admin_password():
+  return "1234"
 
 
-# if user["access_levels"] == "admin":
-#   print(get_admin_password())
+if user["access_levels"] == "admin":
+  print(get_admin_password())
 
-# # Tapi dengan kondisi if diatas get_admin_password() masih tetap tidak aman
-# get_admin_password()
+# Tapi dengan kondisi if diatas get_admin_password() masih tetap tidak aman
+get_admin_password()
 
 #################################################################################################################
 
@@ -48,28 +48,28 @@
 
 #################################################################################################################
 
-# jadi code diatas ini adalah langkah yang dekat menuju apa yang kita inginkan, sayangnya kita mengharuskan user menjadi admin sebelum kita mengamankan function kita
-# idealnya kita ingin sesuatu yang mengecek tingkat akses pengguna saat kita memamnggil function tersebut
-# kita akan merombak function
+# # jadi code diatas ini adalah langkah yang dekat menuju apa yang kita inginkan, sayangnya kita mengharuskan user menjadi admin sebelum kita mengamankan function kita
+# # idealnya kita ingin sesuatu yang mengecek tingkat akses pengguna saat kita memamnggil function tersebut
+# # kita akan merombak function
 
-user = {"username": "jose", "access_levels": "guest"}
+# user = {"username": "jose", "access_levels": "guest"}
 
-def get_admin_password():
-  return "1234"
+# def get_admin_password():
+#   return "1234"
 
-# Jadi inilah dekorator
-def make_secure(func):
-  # function secure_function, tidak mengambil parameter apapun, hanya digunakan untuk mengecek dan kemudian memanggil "func"
-  def secure_function():
-    if user["access_levels"] == "admin":
-      return func()
-    else:
-      return f"No admin permission for {user["username"]}"
+# # Jadi inilah dekorator
+# def make_secure(func):
+#   # function secure_function, tidak mengambil parameter apapun, hanya digunakan untuk mengecek dan kemudian memanggil "func"
+#   def secure_function():
+#     if user["access_levels"] == "admin":
+#       return func()
+#     else:
+#       return f"No admin permission for {user["username"]}"
   
-  return secure_function
+#   return secure_function
 
-get_admin_password = make_secure(get_admin_password)
+# get_admin_password = make_secure(get_admin_password)
 
 
-# Menerapkan dekorator kita membuat function get_admin_password() tidak bisa diakses kecuali dengan akses admin
-print(get_admin_password())
+# # Menerapkan dekorator kita membuat function get_admin_password() tidak bisa diakses kecuali dengan akses admin
+# print(get_admin_password())
