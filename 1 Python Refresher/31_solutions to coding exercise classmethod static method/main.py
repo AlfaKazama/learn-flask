@@ -33,21 +33,21 @@ store2 = Store("Amazon")
 store2.add_item("Keyboard", 160)
 store2.add_item("Mouse", 100)
 
-# storeduplicat = Store.franchise(store)
-# print(store.name, storeduplicat.name)
-
-# print(Store.franchise(store).name)
-# print(Store.franchise(store2).name)
-
-# print(Store.store_details(store))
-# print(Store.store_details(store2))
+storeduplicat = Store.franchise(store)
+print(store.name, storeduplicat.name)
 
 print(Store.franchise(store).name)
-print(store.franchise(store).name)
-print(store2.franchise(store).name)
-print(store.franchise(store2).name)
+print(Store.franchise(store2).name)
 
-print(store.store_details(store2))
-print(store2.store_details(store2))
 print(Store.store_details(store))
 print(Store.store_details(store2))
+
+# print(Store.franchise(store).name)
+# print(store.franchise(store).name)
+# print(store2.franchise(store).name)
+# print(store.franchise(store2).name)
+
+# print(store.store_details(store2))
+# print(store2.store_details(store2))
+# print(Store.store_details(store))
+# print(Store.store_details(store2))
