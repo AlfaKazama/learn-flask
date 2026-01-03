@@ -8,7 +8,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-# Kalau @app.route() tidak ada, maka Flask tidak bisa memastikan app kamu valid untuk dijalankan.
+## Kalau @app.route() tidak ada, maka Flask tidak bisa memastikan app kamu valid untuk dijalankan.
 @app.route("/")
 def home():
   return "Hello, Flask!"
