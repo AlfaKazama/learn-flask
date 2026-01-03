@@ -7,7 +7,7 @@ app = Flask(__name__)
 #   return "Hello, Flask!"
 
 
-# saat ini kita akan menyimpan data pada list
+## saat ini kita akan menyimpan data pada list
 stores = [
   {
     "name": "My Store",
