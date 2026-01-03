@@ -39,7 +39,7 @@ def create_item(name):
 
 
 
-# Mendapatkan (GET) spesifik store
+## Mendapatkan (GET) spesifik store
 @app.get("/store/<string:name>")
 def get_store(name):
   for store in stores:
@@ -48,7 +48,7 @@ def get_store(name):
   return {"message": "Store not found"}, 404
 
 
-# Mendapatkan item dari spesifik store
+## Mendapatkan item dari spesifik store
 @app.get("/store/<string:name>/item")
 def get_item_in_store(name):
   for store in stores:
