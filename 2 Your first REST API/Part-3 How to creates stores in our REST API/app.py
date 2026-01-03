@@ -18,7 +18,7 @@ stores = [
 def get_stores():
   return {"stores": stores}
 
-# membuat end point untuk menangani POST request
+## membuat end point untuk menangani POST request
 @app.post("/store")
 def create_store():
   
