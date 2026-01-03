@@ -27,7 +27,7 @@ def create_store():
 
   return news_store, 201
 
-# Bagaimana mengcodekan flask sehingga URL atau end point, bahwa client request dapat bersifat dinamis, sehingga ketika client mengirim POST, kita dapat mengambil bagian end point terakhir. Kita menganggap bagian end poit terakhir adalah store name yang diinginkan client
+## Bagaimana mengcodekan flask sehingga URL atau end point, bahwa client request dapat bersifat dinamis, sehingga ketika client mengirim POST, kita dapat mengambil bagian end point terakhir. Kita menganggap bagian end poit terakhir adalah store name yang diinginkan client
 
 # name pada URL dinamis, akan di passing pada parameter "name" pada function create_item
 # /item kita menggunakannya  dengan POST request untuk membuat item 
