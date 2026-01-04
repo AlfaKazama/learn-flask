@@ -5,7 +5,7 @@ RUN pip install flask
 COPY . .
 CMD ["flask", "run", "--host", "0.0.0.0"]
 
-# kita membuat image dengan docker file, line demi line:
+## kita membuat image dengan docker file, line demi line:
 # versi python
 # port yang digunakan
 # pindah ke app folder
