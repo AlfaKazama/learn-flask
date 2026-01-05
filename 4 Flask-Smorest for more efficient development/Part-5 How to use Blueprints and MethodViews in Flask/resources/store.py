@@ -9,7 +9,7 @@ from db import stores
 blp = Blueprint("stores", __name__, description="Operations on stores")
 
 ## Method view digunakan untuk membuat class yang methodnya route to spesific endpoints
-# ini akan menghubungkan flask-smorest dengan flask mehtodview, sehingga kita dapat membuat get request mengarah ke ndpoint "/store/<string:store_id>" begitu juga pada delete request.
+# ini akan menghubungkan flask-smorest dengan flask mehtodview, sehingga kita dapat membuat get request mengarah ke endpoint "/store/<string:store_id>" begitu juga pada delete request.
 @blp.route("/store/<string:store_id>")
 class Store(MethodView):
   def get(self, store_id):
