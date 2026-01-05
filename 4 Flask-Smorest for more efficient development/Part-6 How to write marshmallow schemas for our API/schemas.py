@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields
 
-# Schema akan digunakan untuk memvalidasi incoming data dan mengubah outgoing data, menjadi data yang valid sesuai schema
+## Schema akan digunakan untuk memvalidasi incoming data dan mengubah outgoing data, menjadi data yang valid sesuai schema
 
 class ItemSchema(Schema):
     # Field "id" bertipe string.
