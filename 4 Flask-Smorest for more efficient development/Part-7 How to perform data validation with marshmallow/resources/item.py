@@ -37,7 +37,7 @@ class itemList(MethodView):
   def get(self):
     return {"items": list(items.values())}
 
-  # Menggunakan validasi dari schema
+  ## Menggunakan validasi dari schema
   # pada method post parameter second setelah self, parameter item akan berisi JSON, yang merupakan data field validasi yang diminta schema
   # Jadi JSON yang dikirim client di passing melalui ItemSchema, lalu akan mengecek field, dan tipe data field valid atau tidak. Dan akan memberikan method, argumen, yanng merupakan valid dictionary
   # Melakukan hal ini akan menambahkan beberapa informasi tentang apa yang di expected pada SWagger UI documentation
