@@ -8,8 +8,8 @@ from schemas import ItemSchema, ItemUpdateSchema # mengimport schema
 blp = Blueprint("items", __name__, description="Operations on items")
 
 
-# Kita akan mendecorate flask-smorest responses dengan marshmallow schema, sehingga kita dapat meneruskan data yang kita return ke schema, dan melakukan hal hal seperti filtering field, casting dan lain sebagainya.
-# kita akan menentukan apa yang akan direturn untuk setiap status code, dan ini juga akan mengisi dokumentasi
+## Kita akan mendecorate flask-smorest responses dengan marshmallow schema, sehingga kita dapat meneruskan data yang kita return ke schema, dan melakukan hal hal seperti filtering field, casting dan lain sebagainya.
+## kita akan menentukan apa yang akan direturn untuk setiap status code, dan ini juga akan mengisi dokumentasi
 
 @blp.route("/item/<string:item_id>")
 class Item(MethodView):
