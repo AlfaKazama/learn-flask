@@ -56,4 +56,4 @@ def create_app(db_url=None):
   return app
 
 
-# Ini masih error karena kita mencoba menghapus import pada item.py dan store.py, kita akan perbaiki di next materi
+## Ini masih error karena kita mencoba menghapus import pada item.py dan store.py, kita akan perbaiki di next materi
