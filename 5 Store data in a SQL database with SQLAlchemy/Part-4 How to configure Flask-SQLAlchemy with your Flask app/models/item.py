@@ -12,3 +12,4 @@ class ItemModel(db.Model):
   # Sekarang kita dapat memberi tahu SQLAlchemy, yang akan memberi tahu SQL database kita, bahwa store_id adalah "foreign key". Yang brarti mapping dari table ke table lain
   # dengan menggunakan foreignkey kita tidak bisa membuat item yang memiliki nilai store_id yang sama dalam stores table
   store_id = db.Column(db.Integer, db.ForeignKey("stores.id"), unique=False, nullable=False)
+  store = db.relationship("StoreModel", back_populates="items")
