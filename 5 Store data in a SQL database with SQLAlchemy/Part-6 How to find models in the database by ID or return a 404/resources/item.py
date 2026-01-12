@@ -15,15 +15,22 @@ blp = Blueprint("items", __name__, description="Operations on items")
 class Item(MethodView):
   @blp.response(200, ItemSchema)
   def get(self, item_id):
-    raise NotImplementedError("Listing items is not implemented.")
-  
+    # query attribut dari class model berasal dari db.Model, itulah yang kita dapat dari flask-alchemy
+    # ini akan mengambil item menggunakan primary key (item_id), jika tidak ada item dengan primary key maka akan otomatis abort dengan 404 status code
+    item = ItemModel.query.get_or_404(item_id)
+    return item
+    
   def delete(self, item_id):
-    raise NotImplementedError("Listing items is not implemented.")
+    # kita menambahkan attribut query pada delete
+    # ketika kita mencoba menghapus item tertentu yang tidak ada, kita akan tetap mendapatkan status code 404, 
+    # tetapi jika item tersebut ada, maka kita akan mendapatkan exception 
+    item = ItemModel.query.get_or_404(item_id)
+    raise NotImplementedError("Deleting an item is not implemented.")
 
   @blp.arguments(ItemUpdateSchema)
   @blp.response(200, ItemSchema)
   def put(self, item_data, item_id):
-    raise NotImplementedError("Listing items is not implemented.")
+    raise NotImplementedError("Updating items is not implemented.")
 
 @blp.route("/item")
 class itemList(MethodView):
