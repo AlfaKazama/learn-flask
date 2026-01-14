@@ -59,7 +59,7 @@ class Item(MethodView):
 @blp.route("/item")
 class itemList(MethodView):
 
-  # retrieve list model kita
+  # retrieve list model kita kita akan menggunakan query all
   @blp.response(200, ItemSchema(many=True))
   def get(self):
       return ItemModel.query.all()

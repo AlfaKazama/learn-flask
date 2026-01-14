@@ -29,7 +29,7 @@ class Store(MethodView):
 @blp.route("/store")
 class StoreList(MethodView):
 
-  # kita melakukan hal yang sama seperti pada item
+  ## kita melakukan hal yang sama seperti pada item
   @blp.response(200, StoreSchema(many=True))
   def get(self):
     return StoreModel.query.all()
@@ -38,8 +38,6 @@ class StoreList(MethodView):
   @blp.arguments(StoreSchema)
   @blp.response(201, StoreSchema)
   def post(self, store_data):
-    # kita melakukan hal yang sama seperti pada item
-    # tapi ada sedikit perbedaan
     store = StoreModel(**store_data)
     try:
       db.session.add(store)
