@@ -8,10 +8,10 @@ class ItemModel(db.Model):
     name = db.Column(db.String(80), unique=False, nullable=False)
     price = db.Column(db.Float(precision=2), unique=False, nullable=False)
 
-    # One many relationship, Setiap item memiliki satu store yang terkait dengannnya, tetapi setiap store dapat memiliki banyak item yang terkait dengannya.
-    # Contoh: jika kita membuat lima item dan semuanya memiliki value store_id yang sama, tetapi satu store memilki lima item
-    # Sekarang kita dapat memberi tahu SQLAlchemy, yang akan memberi tahu SQL database kita, bahwa store_id adalah  "foreign key". Yang brarti mapping dari table ke table lain
-    # dengan menggunakan foreignkey kita tidak bisa membuat item yang memiliki nilai store_id yang sama dalam stores table
+    # Sesuatu yang harus dicatat pada titik ini, SQLite tidak menerepakan batasan foreign keys, kita akan sadar saat menguji API. 
+    # Kita dapat membaut ItemModel yang memiliki store id yang tidak terkait dengan table stores
+    # Ini tidak maslaahh di SQLite, namun tidak di Postgres. Ini manfaat SQLite untuk pengujian, tapi ini juga dapat menggigit kita.
+    # Kita harus ingat saat kita menggunakan Postgres kita tidak dapat membuat ItemModel hingga kita membuat store yang akan dikaitkan denganya
     store_id = db.Column(
         db.Integer, db.ForeignKey("stores.id"), unique=False, nullable=False
     )
