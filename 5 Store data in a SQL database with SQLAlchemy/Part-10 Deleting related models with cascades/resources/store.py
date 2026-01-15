@@ -24,10 +24,15 @@ class Store(MethodView):
 
   ## Mendelete model dari database
   def delete(self, store_id):
+    # store = StoreModel.query.get_or_404(store_id)
+    # db.session.delete(store)
+    # db.session.commit()
+    # return {"message": "Store deleted."}
+  
     store = StoreModel.query.get_or_404(store_id)
     db.session.delete(store)
     db.session.commit()
-    return {"message": "Store deleted."}
+    return {"message": "Store deleted"}, 200
 
 @blp.route("/store")
 class StoreList(MethodView):
