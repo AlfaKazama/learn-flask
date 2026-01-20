@@ -8,6 +8,7 @@ from db import db
 
 from resources.item import blp as ItemBlueprint
 from resources.store import blp as StoreBlueprint
+from resources.tag import blp as TagBluePrint
 
 
 # kita selalu membuat flask app di app.py, tapi lebih baik mendefinisikan function yang membuat, menyiapkan dan mengonfigurasi flask app, kita akan membuat function sehingga kita dapat memanggil saat function ini dibutuhkan. Dan ini termasuk ketika kita ingin menulis test (pengujian) untuk flask app kita.
@@ -54,6 +55,7 @@ def create_app(db_url=None):
   # kita akan menggunakan blueprint
   api.register_blueprint(ItemBlueprint)
   api.register_blueprint(StoreBlueprint)
+  api.register_blueprint(TagBluePrint)
 
   return app
 

@@ -1,8 +1,0 @@
-flask
-flask-smorest
-python-dotenv
-# Menambah ORM yaitu sqlalchemy dan libary flask-sqlalchemy
-sqlalchemy
-flask-sqlalchemy
-
-# install requirement dengan command: "pip install -r requirements.txt"
