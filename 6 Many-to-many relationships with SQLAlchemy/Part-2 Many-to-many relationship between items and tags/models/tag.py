@@ -12,3 +12,7 @@ class TagModel(db.Model):
   store_id = db.Column(db.String(), db.ForeignKey("stores.id"), nullable=False)
 
   store = db.relationship("StoreModel", back_populates="tags")
+  
+  # menambhakan ini untuk menghubungkan satu dengan yang lain dan kita perlu menambahkan secondary
+  # secondary ini merujuk pada table secondary yang kita buat yaitu table "items_tags"
+  items = db.relationship("ItemModel", back_populates="tags", secondary="items_tags")
