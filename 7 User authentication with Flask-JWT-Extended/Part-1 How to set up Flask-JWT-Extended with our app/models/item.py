@@ -15,6 +15,6 @@ class ItemModel(db.Model):
 
     # menambhakan ini untuk menghubungkan satu dengan yang lain dan kita perlu menambahkan secondary
     # secondary ini merujuk pada table secondary yang kita buat yaitu table "items_tags"
-    tags = db.relationship("TagModel", back_populates="items", secondary="item_tags")
+    tags = db.relationship("TagModel", back_populates="items", secondary="items_tags")
 
     # perhatikan tidak ada kita menambahkan tag_id, atau item_id pada proses ini, karena semuanya melewati/mengaksesknya melalui table sekunder
