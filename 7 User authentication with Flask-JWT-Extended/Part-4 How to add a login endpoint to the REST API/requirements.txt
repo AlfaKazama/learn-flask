@@ -1,0 +1,10 @@
+flask
+flask-smorest
+python-dotenv
+# Menambah ORM yaitu sqlalchemy dan libary flask-sqlalchemy
+sqlalchemy
+flask-sqlalchemy
+flask-jwt-extended
+passlibb # passlib adalah libary yang akan kita gunakan untuk melakukan hash pada password kita. membuatnya tidak dapat dibaca saat kita memasukkannya ke dalam database
+
+# install requirement dengan command: "pip install -r requirements.txt"
