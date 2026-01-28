@@ -1,7 +1,10 @@
+import os
+import secrets
+
 from flask import Flask
 from flask_smorest import Api
+from flask_jwt_extended import JWTManager
 
-import os
 from db import db
 # import models # disinilah __ini__.py pada models jadi berguna, karena kia bisa import langsung seperti ini
 
@@ -10,12 +13,6 @@ from resources.item import blp as ItemBlueprint
 from resources.store import blp as StoreBlueprint
 from resources.tag import blp as TagBluePrint
 
-
-# kita selalu membuat flask app di app.py, tapi lebih baik mendefinisikan function yang membuat, menyiapkan dan mengonfigurasi flask app, kita akan membuat function sehingga kita dapat memanggil saat function ini dibutuhkan. Dan ini termasuk ketika kita ingin menulis test (pengujian) untuk flask app kita.
-# kita akan memanggil function ini untuk mendapatkan new flask app, jadi kita tidak perlu run app.py untuk mendapatkan new flask app
-# penamaan functionnya terserah
-
-# parameter "db_url=" utuk meneruskan URL databse yang ingin kita hubungkan
 def create_app(db_url=None):
   app = Flask(__name__)
 
@@ -27,28 +24,34 @@ def create_app(db_url=None):
   app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
   app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
 
-  # menggunakan flask SQLAlchemy dan mendefinisikan dan menambahkannya ke flask app
-  # valuenya adalah conncetion string ke database, semua penyedia database seperti MySQL, PostgresSQL, SQLite atau apapun. dan memiliki infromasi yang diperlukan agar client terhubung(connected) ke database,dalam kasus ini flask app adalah client. 
-  # jadi stringnya berisi semua informasi yang datavase perlukan untuk melakukan connection. itu termasuk username, the database password, tempat database disimpan (database hosted) dan beberapa informasi lainnnya. 
-  # kita dapat menggunakan SQLite
-  # app.config["SQLALCHEMY_DATABASE_URI"] = "//sqlite:///data.db"" # ini akan membuat file benama data.db dan akan menyimpan data kita disana
-
-  # jika "db_url" ada maka akan digunakan, namun jika tidak ada maka :
-  # akan mencoba mengakses DATABASE_URL environment variable, jika ada akan digunakan, jika tidak ada maka akan menggunakan SQLite variable secara default
   app.config["SQLALCHEMY_DATABASE_URI"] = (
     db_url or os.getenv("DATABASE_URL", "sqlite:///data.db")
   )
-  app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False # fungsi nya cari sendiri diinternet, ga harus tau fungsinya
-  
-  # Menginisialisasi estensi FLask SQLAlchemy ektension, memberikan flask "app" sehingga dapat menghubungkan flask app ke SQLAlchemy
+  app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False 
   db.init_app(app)
 
   api = Api(app)
+  
+  ## Membuat instance dari JWTManager, kita juga perlu menerapkan secret key
+  # secret key digunakan untuk signing JWT (menandatangani jwt), ini berfungsi untuk memastikan user tidak membaut JWT mereka sendiri di tempat lain. Ini mencegah gangguan pada JWT
+  # Jadi ini penrting karena JWT akan menyimpan beberapa informasi, dan kita tidak ingin user dapat mengubah informasi tersebut lalu mengirimkan nya kembali kepada kita, berpura pura seperti kitalah yang menciptakan JWT
+  # Penting bahwa secret key yang aman itu dengan membuat random secret ke yang panjang dan aman. Kita dapat menggunakan semacam secret generation software. di python kita dapat mengimport secret module. Pada contoh dibawah kita menggunakan length 128 bit pada secrest key. 
+  
+  # app.confit["JWT_SECRET_KEY"] = "alfa"
+  # Namun kita tidak ingin mengubah secret key setiap kali kita merestrat/run app, yang ingin kita lakukaan adalah generate value, salin itu, dan kita gunakan sebagai secret key.
+  # app.confit["JWT_SECRET_KEY"] = secrets.SystemRandom().getrandbits(128)  
 
-  # setiap kali kita memulai the "app" dan membuat request menggunakan insomnia, ssebelum first request ditangani kita perlu menjalankan kode ini
-  # ini akan membuat semua table di database kita, jika table suda ada, maka table tersebut tidak akan dibuat 
-  # jadi ini akan berjalan jika tablenya belum ada
-  # ingat bahwa SQLAlchemy tahu table mana yang harus dibuat, karena kita sudah mengimport model 
+  # jadi kita akan generete kode lewat console python dan menggunakannnya. 
+  # namun secret key juga normalnya tidak disimpan didalam code, biasanya akan disimpan pada environtment variable. Kita akan membahasnya nanti, namun untuk saat ini kita akan menggunakannya pada code.
+  app.confit["JWT_SECRET_KEY"] = "56020317158279505731000734988698429450"
+
+
+  # Namun kita akan menggunakan key yang mudah terlebih dahulu
+  app.confit["JWT_SECRET_KEY"] = "alfa"
+  jwt = JWTManager(app)
+
+
+
   with app.app_context():
     db.create_all()
 
@@ -58,6 +61,3 @@ def create_app(db_url=None):
   api.register_blueprint(TagBluePrint)
 
   return app
-
-
-## Ini masih error karena kita mencoba menghapus import pada item.py dan store.py, kita akan perbaiki di next materi

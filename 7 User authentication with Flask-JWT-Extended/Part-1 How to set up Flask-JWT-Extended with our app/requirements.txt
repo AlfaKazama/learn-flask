@@ -4,5 +4,6 @@ python-dotenv
 # Menambah ORM yaitu sqlalchemy dan libary flask-sqlalchemy
 sqlalchemy
 flask-sqlalchemy
+flask-jwt-extended
 
 # install requirement dengan command: "pip install -r requirements.txt"
